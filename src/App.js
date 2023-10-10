@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
 import { PlusOutlined } from "@ant-design/icons";
 
+const baseURL = "http://localhost:5000";
+
 function App() {
   const [users, setUsers] = useState([]);
   const [entry, setEntry] = useState({
@@ -17,7 +19,7 @@ function App() {
   });
 
   const fetchUsers = () => {
-    axios.get("http://localhost:5000/").then((response) => {
+    axios.get(`${baseURL}/`).then((response) => {
       // console.log(response.data.users);
 
       setUsers(response.data.users);
@@ -42,12 +44,10 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const addData = axios
-      .post("http://localhost:5000/", entry)
-      .then((response) => {
-        // alert(response.data.message);
-        NotificationManager.success(response.data.message, "Success!", 2000);
-      });
+    const addData = axios.post(`${baseURL}/`, entry).then((response) => {
+      // alert(response.data.message);
+      NotificationManager.success(response.data.message, "Success!", 2000);
+    });
 
     setEntry({
       name: "",
@@ -59,14 +59,14 @@ function App() {
     console.log(id, editEntryData);
 
     axios
-      .patch(`http://localhost:5000/${id}`, editEntryData)
+      .patch(`${baseURL}/${id}`, editEntryData)
       .then((response) => {
         NotificationManager.success(response.data.message, "Success!", 2000);
       });
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/${id}`).then((response) => {
+    axios.delete(`${baseURL}/${id}`).then((response) => {
       NotificationManager.warning(response.data.message, "Deleted!", 2000);
     });
 
