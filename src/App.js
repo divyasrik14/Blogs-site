@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
 import { PlusOutlined } from "@ant-design/icons";
 
-const baseURL = "http://localhost:5000";
+const baseURL = "https://blogs-api-vako.onrender.com";
 
 function App() {
   const [users, setUsers] = useState([]);
