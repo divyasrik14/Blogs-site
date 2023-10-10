@@ -1,3 +1,7 @@
+/* <style> */
+@import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bebas+Neue&family=Cinzel:wght@400;500&family=Cutive+Mono&family=Dancing+Script:wght@700&family=Lato:ital,wght@0,300;0,400;1,400&family=Noto+Sans:wght@300&family=Noto+Serif:wght@300&family=Open+Sans:wght@300&family=Oswald:wght@300;400&family=Poppins&family=Quicksand:wght@600&family=Ubuntu:wght@300&family=Ysabeau+Infant:ital,wght@1,200&family=Ysabeau+SC:wght@1;100;600&display=swap");
+/* </style> */
+
 .App {
   text-align: center;
 }
@@ -28,6 +32,12 @@
   color: #61dafb;
 }
 
+body {
+  background-color: #f8f6fc;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Ysabeau Infant", sans-serif;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +45,104 @@
   to {
     transform: rotate(360deg);
   }
+}
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  margin-bottom: 60px;
+  background-color: rgb(73, 53, 121);
+  color: white;
+  font-family: "Ysabeau SC", sans-serif;
+}
+
+button {
+  background-color: rgb(73, 53, 121);
+  color: white;
+  outline: none;
+  border: none;
+}
+
+input,
+textarea {
+  border: none;
+  width: 600px;
+  font-size: 1.2em;
+  padding-left: 30px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input {
+  height: 70px;
+}
+
+textarea {
+  height: 170px;
+  word-wrap: break-word;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(182, 178, 178);
+  border-radius: 5px 20px;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Ysabeau SC", sans-serif;
+}
+
+.add-post {
+  align-self: flex-end;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-top: 220px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.entries-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  margin: 130px 70px 40px;
+  flex-wrap: wrap;
+}
+
+.single-card {
+  border: 1px solid rgb(182, 178, 178);
+  padding: 15px 25px;
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.button-group {
+  /* position: absolute; */
+  align-self: flex-end;
+  margin-top: 40px;
+}
+
+.single-card button {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.read {
+  color: blue;
+  font-weight: bold;
 }
